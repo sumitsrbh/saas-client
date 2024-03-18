@@ -8,9 +8,13 @@ import Home from './Components/HomeCompCont/Home'
 import AboutUs from './Components/AboutUsCont/AboutUs'
 import AdvertiseWdUs from './Components/AdvertiseWdUsCont/AdvertiseWdUs'
 import ContactUs from './Components/ContactUs/ContanctUs'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from './Components/Footer/Footer'
 import NavDrawer from './NavDrawer/NavDrawer'
+import LogIn from './Components/Admin/LogIn'
+import AdminPanel from './Components/Admin/AdminPanel'
+import CardTemplate from './Components/Admin/CardTemplate'
+import { DataProvider } from './Components/DataContext/DataContext'
 
 const navIndexArray = [
   { text: 'Home', route: '/' },
@@ -20,18 +24,24 @@ const navIndexArray = [
   // { text: 'Promote Your SaaS', route: '/promote-your-saas' },
 ]
 function App() {
+  console.log('In the app.js')
   return (
-    <Paper elevation={0}>
-      <NavDrawer links={navIndexArray} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/advertise-with-us" element={<AdvertiseWdUs />} />
-      </Routes>
+    <DataProvider>
+      <Paper elevation={0}>
+        <NavDrawer links={navIndexArray} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/advertise-with-us" element={<AdvertiseWdUs />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/admin-panel" element={<AdminPanel />} />
+          <Route path="/card-template" element={<CardTemplate />} />
+        </Routes>
 
-      <Footer />
-    </Paper>
+        <Footer />
+      </Paper>
+    </DataProvider>
   )
 }
 

@@ -8,6 +8,7 @@ import {
 } from '@mui/material'
 import React from 'react'
 import { EmptySapce, SaaSButton } from '../ThemeCust'
+import { fetchImgObjHom } from '../../Data'
 
 const card1 = {
   imgUrl:
@@ -155,8 +156,14 @@ export function CardBuidlerV2({ cardImgUrl, cardHeader, cardText, cardBadge }) {
     </Card>
   )
 }
+function CardArrayOrganiser() {
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 2; j++) {}
+  }
+}
 
 function HomeScndRwFstColm() {
+  console.log('In the Home2ns Row 2nd col')
   return (
     <Grid container marginTop={8}>
       <Grid container className="sndrw-first-row">

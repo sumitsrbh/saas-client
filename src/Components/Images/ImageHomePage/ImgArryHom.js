@@ -1,8 +1,8 @@
 export const imgCard1 =
   'https://assets-global.website-files.com/5f0a4c1d99c861dc3b6d3a37/658c696931b46a0415d77e66_leveraging_ai_to_enhance_customer_experience_in_saas_a_comprehensive_guide.jpg'
 
-export const imgObjHom = {
-  card1: {
+export const imgObjHom = [
+  {
     badge: 'Operations',
     title: 'onboard',
     imglink:
@@ -13,7 +13,7 @@ export const imgObjHom = {
     Date: '',
     ReadingTime: '',
   },
-  card1_1: {
+  {
     badge: 'Operations',
     title: 'customer_experience',
     imglink:
@@ -23,7 +23,7 @@ export const imgObjHom = {
     Date: '',
     ReadingTime: '',
   },
-  card1_2: {
+  {
     badge: 'Listicle',
     title: 'mastering_the_art_of_saas',
     imglink:
@@ -33,13 +33,6 @@ export const imgObjHom = {
     Date: '',
     ReadingTime: '',
   },
-  // card1_3: {
-  //   badge: 'Metrics',
-  //   title: 'onboard',
-  //   imglink: imgCard1_1,
-  //   headertext:
-  //     'Leveraging AI To Enhance Customer Experience In SaaS: A Comprehensive Guide',
-  // },
-}
+]
 
 export default imgObjHom

@@ -1,3 +1,18 @@
+import axios from 'axios'
+import { useEffect } from 'react'
+
+export const fetchImgObjHom = async () => {
+  try {
+    const response = await axios.get('http://127.0.0.1:8000/api/cards')
+    // console.log('Response data from Card fetching::', response.data.data)
+    return response.data.data
+  } catch (error) {
+    console.error('Error fetching imgObjHom:', error)
+    // throw error
+  }
+}
+
+// console.log('Inside the Data component!')
 export const youMightLike = [
   {
     imageUrl:

@@ -132,7 +132,7 @@ function CardBuilder() {
     </Grid>
   )
 }
-function Expandlepanel({ headerText, text }) {
+export function Expandlepanel({ headerText, text1, text2, text3 }) {
   return (
     <Accordion sx={{ backgroundColor: '#777777' }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -141,7 +141,9 @@ function Expandlepanel({ headerText, text }) {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography sx={{ color: '#ffffff80' }}>{text}</Typography>
+        <Typography sx={{ color: '#ffffff80' }}>{text1}</Typography>
+        <Typography sx={{ color: '#ffffff80' }}>{text2}</Typography>
+        <Typography sx={{ color: '#ffffff80' }}>{text3}</Typography>
       </AccordionDetails>
     </Accordion>
   )
@@ -206,13 +208,13 @@ function AdvertiseWdUs() {
         <Grid item xs={8} marginTop={5}>
           <Expandlepanel
             headerText={'How many people will see my ad?'}
-            text={
+            text1={
               'The SaaS industry is growing in leaps and bounds every year and the visibility of new SaaS platforms like SaaS Journal create a funnel for discovery, awareness, sales and investor relationship. While still in the nascent stages of our growth our numbers are increasing day by day so please reach out to us to get the most recents stats.'
             }
           />
           <Expandlepanel
             headerText={'Who is your primary audience?'}
-            text={
+            text1={
               <>
                 <p>
                   Our primary audience is can be divided into four distinct
@@ -239,7 +241,7 @@ function AdvertiseWdUs() {
           ></Expandlepanel>
           <Expandlepanel
             headerText={'Any other channels other than the website?'}
-            text={
+            text1={
               <p>
                 As is the proven success model of SaaS industry we market
                 heavily on all knowns Social Media Channels and have customized
@@ -252,7 +254,7 @@ function AdvertiseWdUs() {
           ></Expandlepanel>
           <Expandlepanel
             headerText={'Do you have any discounts?'}
-            text={
+            text1={
               'We are open to hear about barter offers or a genuine need of discount.'
             }
           ></Expandlepanel>

@@ -25,6 +25,7 @@ import MorePost, { cardArray } from '../MorePostFrmRdr/MorePost'
 import MightLike from './MightLike'
 
 function Home() {
+  // console.log('HOme start')
   const [tabMightInterestU, setTabMightInterestU] = useState()
   const [tabMostPopular, setTabMostPopular] = useState()
   return (

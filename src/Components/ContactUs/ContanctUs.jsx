@@ -2,7 +2,7 @@ import { Card, CardMedia, Grid, Paper, Typography } from '@mui/material'
 
 import React from 'react'
 import SubscribeCard from '../HomeCompCont/SubscribeForm'
-import SubscribeForm from '../HomeCompCont/SubscribeForm'
+import SubscribeForm from './SubscribeForm'
 
 function ContanctUs() {
   return (
@@ -33,6 +33,7 @@ function ContanctUs() {
       </Grid>
       {/* <SubscribeCardAlike header={'How can we help'} /> */}
       <SubscribeCard header={'How can we help'} />
+      <SubscribeForm />
     </Paper>
   )
 }
